@@ -28,7 +28,7 @@ def get_and_save_btc_price():
 with DAG(
     dag_id='bitcoin_db_saver_v1',
     start_date=datetime(2024, 1, 1),
-    schedule_interval=None,
+    schedule_interval='0 0 * * *',
     catchup=False
 ) as dag:
 
